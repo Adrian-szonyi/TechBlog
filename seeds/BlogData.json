@@ -1,0 +1,23 @@
+[
+    {
+      "name": "Blogpost 1",
+      "description": "the best blogpost you will ever read.",
+      "content": "salnjfnl;ajsfnlajsnfljnasljfnaljsnfljnalsfnalsnfljasnjfja",
+      "image": "https://www.freeimages.com/photo/clouds-1371838",
+      "user_id": 1
+    },
+    {
+        "name": "Blogpost 2",
+        "description": "the best blogpost you will ever read.",
+        "content": "salnjfnl;ajsfnlajsnfljnasljfnaljsnfljnalsfnalsnfljasnjfja",
+        "image": "https://www.freeimages.com/photo/clouds-1371838",
+        "user_id": 1
+    },
+    {
+        "name": "Blogpost 3",
+        "description": "the best blogpost you will ever read.",
+        "content": "salnjfnl;ajsfnlajsnfljnasljfnaljsnfljnalsfnalsnfljasnjfja",
+        "image": "https://www.freeimages.com/photo/clouds-1371838",
+        "user_id": 1
+    }
+  ]

@@ -25,6 +25,13 @@ const sess = {
 };
 
 app.use(session(sess));
+app.get('/', async (req, res) => {
+    try {
+      res.render('homepage');
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
