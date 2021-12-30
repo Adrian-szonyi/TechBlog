@@ -5,6 +5,7 @@ const userData = require('./userData.json');
 const BlogData = require('./BlogData.json');
 
 const seedDatabase = async () => {
+  try {
   await sequelize.sync({ force: true });
 
   const users = await User.bulkCreate(userData, {
@@ -16,7 +17,11 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  
+        
+} catch (err) {
+  console.log("message", err);
+}
+
 
   process.exit(0);
 };

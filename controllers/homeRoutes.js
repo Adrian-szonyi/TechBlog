@@ -3,24 +3,22 @@ const { BlogPost, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-router.get('/', async (req, res) => {
+router.get('/homepage', async (req, res) => {
   try {
-    const BlogPostData = await BlogPost.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+    const BlogPostData = await BlogPost.findAll()
+    //   include: [
+    //     {
+    //       model: User,
+    //       attributes: ['name'],
+    //     },
+    //   ],
+    // });
 
-    const blogposts = BlogPostData.map((blogpost) => blogpost.get({ plain: true }));
+    const blogposts  = BlogPostData.map(blogpost => blogpost.get({ plain: true }));
+    console.log(blogposts)
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-  blogposts, 
-      logged_in: req.session.logged_in 
-    });
+    res.render('homepage', { blogposts });
   } catch (err) {
     res.status(500).json(err);
   }

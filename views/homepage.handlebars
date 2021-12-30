@@ -1,6 +1,18 @@
-
+<body>
   <div class="col-md-6 project-list">
     <h3>Previous Posts:</h3>
+<h1>help!</h1>
+{{#each blogposts as |blogpost|}}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{blogpost.image}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{blogpost.name}}</h5>
+    <p class="card-text">{{blogpost.description}}</p>
+    <a href="#" class="btn btn-primary">Read more</a>
   </div>
-    {{{ body }}}
+</div>   
+ {{/each}}
+  </div>
  </div>
+
+ </body>

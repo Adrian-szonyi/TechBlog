@@ -21,11 +21,6 @@ BlogPost.init(
     content: {
       type: DataTypes.TEXT,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW
-    },
     image: {
         type: DataTypes.TEXT,
         allowNull: true,
